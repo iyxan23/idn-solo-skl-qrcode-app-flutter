@@ -23,8 +23,7 @@ class _ScanCodePageState extends State<ScanCodePage> {
             children: [
               MobileScanner(
                 controller: MobileScannerController(
-                  detectionSpeed: DetectionSpeed.normal,
-                  detectionTimeoutMs: 5000,
+                  detectionSpeed: DetectionSpeed.noDuplicates,
                   returnImage: true,
                 ),
                 onDetect: (capture) {
@@ -78,7 +77,6 @@ class _ScanCodePageState extends State<ScanCodePage> {
                   ),
                 ),
               ),
-
               const Positioned.fill(
                 top: 300,
                 child: SizedBox(
@@ -91,7 +89,6 @@ class _ScanCodePageState extends State<ScanCodePage> {
                   ),
                 ),
               ),
-
               Positioned(
                 top: 0,
                 left: 0,
